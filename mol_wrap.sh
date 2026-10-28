@@ -9,7 +9,7 @@ Wrapper options (intercepted here):
     -i, --input (str):       [Required] Input FASTA file.
     -o, --out_dir (str):     [Default: ./output] Output directory for results.
     -s, --seeds (int):       [Default: 5] Number of seeds to generate for the model.
-    -b, --base-seed (int):   [Default: 2026] The base seed for seeds to be built off of
+    -b, --base_seed (int):   [Default: 2026] The base seed for seeds to be built off of
     -t, --template:          Whether to run template search and include templates in prediction.
 
 Forwarded mol options:
@@ -259,7 +259,7 @@ while [[ "$#" -gt 0 ]]; do
         -t|--template)
             echo "Using templates during the prediction"
             USE_TEMPLATES="1"
-            EXTRA_ARGS+=("--use_template true")
+            EXTRA_ARGS+=("--use_template" "true")
             shift 1
             ;;
         --use_seeds_in_json)
